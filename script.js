@@ -1,14 +1,14 @@
-// Création du Bouton Ajouter :
+// Creating the Add Button :
 var buttonAdd = document.querySelector(".buttonAdd");
 
-// Création de la Variable de la Liste à Faire
+// Creation of the To Do List Variable :
 var listeAfaire = document.querySelector(".listeAfaire");
 
-// Création de la Variable de la Liste Finies
+// Creation of the Finite List Variable:
 var listeFinies = document.querySelector(".listeFinies");
 
 
-// Création de l'Ajout de la Tache dans la Liste
+// Creating the Adding the Spot to the List :
 buttonAdd.addEventListener("click", function(){
     let tachesAjoutee = document.createElement("li");
     tachesAjoutee.innerText = document.getElementById("taches").value;
@@ -16,12 +16,12 @@ buttonAdd.addEventListener("click", function(){
     listeAfaire.appendChild(tachesAjoutee);
     document.getElementById("taches").value = "";
 
-    //Création du Boutton Taches Faites
+    //Creation of the button Stains Done :
     let buttonFait = document.createElement("button");
-    buttonFait.style.marginRight = "30px";
+    buttonFait.style.marginRight = "20px";
     tachesAjoutee.prepend(buttonFait);
     buttonFait.innerText = "Fait";
-    //Ecoute du boutton tache faite
+    //Listening to the button task done:
     buttonFait.addEventListener("click", function(){
         tachesAjoutee.style.textDecoration = "line-through";
         tachesAjoutee.style.color = "red";
@@ -29,15 +29,15 @@ buttonAdd.addEventListener("click", function(){
     })
 
 
-    //Création du Boutton suppression
+    //Creation of the Delete Button :
     let buttonSupp = document.createElement("button");
-    tachesAjoutee.style.fontSize = "20px"; 
+    tachesAjoutee.style.fontSize = "30px"; 
     buttonSupp.innerText = "Supprimer";
     buttonSupp.style.marginLeft = "20px";
     buttonSupp.style.color = "#DC143C";
     buttonSupp.style.borderRadius = "10 px";
     tachesAjoutee.appendChild(buttonSupp);
-    // Ecoute du bouton au Click
+    // Listening to the button at the Click
     buttonSupp.addEventListener("click", function(){
         let tachesFinies = document.createElement("li");
         tachesFinies = tachesAjoutee;
