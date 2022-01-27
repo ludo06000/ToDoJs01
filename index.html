@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Liste taches à faire</h1>
+
+    <form id="buttonContainer">
+        <input type="text" id="taches" name="taches" required minlength="4" size="20" placeholder="Veuillez inérer votre tache">
+        <button class="buttonAdd" type="button" accesskey="enter">Ajouter</button>
+    </form>
+
+    <div class="toDoList">
+
+        <div class="tachesEnCours">
+            <h3 class="titreTachesEnCours">Tâches En Cours : </h3>
+            <ul class="listeAfaire">
+            </ul>
+
+
+        </div>
+
+        <div class="tachesfinies">
+            <h3 class="titreTachesFinies">Tâches Finies : </h3>
+            <ul class="listeFinies">
+            </ul>          
+
+        </div>
+
+
+
+    </div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
